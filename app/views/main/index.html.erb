@@ -10,7 +10,7 @@
   <%if @guides%>
     <% @guides.each do |i| %>
       <tr>
-        <td><%=link_to i.name %></td>
+        <td><%=link_to i.name, guide_path(i) %></td>
         <td><%= i.phone_number%></td>
         <td><%= i.city%></td>
         <td><%= i.country%></td>

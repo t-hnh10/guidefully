@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Phone Number</th>
+    <th>City</th>
+    <th>Country</th>
+    <th>Cost</th>
+  </tr>
+  <%if @guides%>
+    <% @guides.each do |i| %>
+      <tr>
+        <td><%=link_to i.name %></td>
+        <td><%= i.phone_number%></td>
+        <td><%= i.city%></td>
+        <td><%= i.country%></td>
+        <td><%= i.cost%></td>
+      </tr>
+    <%end%>
+  <%end%>
+</div>

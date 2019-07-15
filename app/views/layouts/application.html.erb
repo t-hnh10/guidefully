@@ -12,10 +12,14 @@
     <title>Mr Worldwide Guide</title>
   </head>
 
-  <body>
+  <body class="section">
     <%= render "shared/topnav" %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="navbar">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

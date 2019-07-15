@@ -1,23 +1,27 @@
 <div>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Phone Number</th>
-    <th>City</th>
-    <th>Country</th>
-    <th>Cost</th>
-  </tr>
-  <%if @guides%>
-    <% @guides.each do |i| %>
-      <tr>
-        <td><%=link_to i.name, guide_path(i) %></td>
-        <td><%= i.phone_number%></td>
-        <td><%= i.city%></td>
-        <td><%= i.country%></td>
-        <td><%= i.cost%></td>
-      </tr>
+<table class="table">
+  <thead>  
+    <tr>
+      <th>Name</th>
+      <th>Phone Number</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%if @guides%>
+      <% @guides.each do |i| %>
+        <tr>
+          <td><%=link_to i.name, guide_path(i) %></td>
+          <td><%= i.phone_number%></td>
+          <td><%= i.city%></td>
+          <td><%= i.country%></td>
+          <td><%= i.cost%></td>
+        </tr>
+      <%end%>
     <%end%>
-  <%end%>
+  </tbody>
  </table>
  <%= link_to 'Join as a Guide', new_guide_path%>
  <br> 

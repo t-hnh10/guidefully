@@ -1,24 +1,46 @@
 <%= form_with model: @guide, local:true do |form| %>
-    <p>
-        <%=label(:name, 'Name')%>
-        <%= form.text_field :name, required: true, minlength: 1%>
-    </p>
-    <p>
-        <%=label(:phone_number, 'Phone Number')%>
-        <%= form.text_field :phone_number, required: true%>
-    </p>
-    <p>
-        <%=label(:city, 'City')%>
-        <%= form.text_field :city, required: true, minlength: 1%>
-    </p>
-    <p>
-        <%=label(:country, 'Country')%>
-        <%= form.text_field :country, required: true, minlength: 1%>
-    </p>
-    <p>
-        <%=label(:cost, 'Cost')%>
-        <%= form.number_field :cost, required: true, minlength: 1%>
-    </p>
-    <%= form.submit "Add details" %><br>
-    <%= link_to("Back", main_index_path, :method => :get) %>
+    <div class="field">
+        <%=label(:name, 'Name', :class => 'label')%>
+        <div class="control">
+            <%= form.text_field :name, required: true, minlength: 1, :class => 'input', :type => 'text', :placeholder => 'Name'%>
+        </div>
+    </div>
+    <div class="field">
+        <%=label(:phone_number, 'Phone Number', :class => 'label')%>
+        <div class="control has-icons-left has-icons-right">
+            <%= form.text_field :phone_number, required: true, :class => 'input', :placeholder => 'Phone Number', :type => 'tel'%>
+            <span class="icon is-small is-left">
+            <i class="fas fa-phone"></i>
+            </span>
+        </div>
+    </div>
+    <div class="field">
+        <%=label(:city, 'City', :class => 'label')%>
+        <div class="control has-icons-left has-icons-right">
+            <%= form.text_field :city, required: true, minlength: 1, :class => 'input', :placeholder => 'City', :type => 'text' %>
+            <span class="icon is-small is-left">
+            <i class="fas fa-city"></i>
+            </span>
+        </div>
+    </div>
+    <div class="field">
+        <%=label(:country, 'Country', :class => 'label')%>
+        <div class="control has-icons-left has-icons-right">
+            <%= form.text_field :country, required: true, minlength: 1, :class => 'input', :placeholder => 'Country', :type => 'text' %>
+            <span class="icon is-small is-left">
+            <i class="fas fa-flag"></i>
+            </span>
+        </div>
+    </div>
+    <div class="field">
+        <%=label(:cost, 'Price', :class => 'label')%>
+        <div class="control has-icons-left has-icons-right">
+            <%= form.number_field :cost, required: true, minlength: 1, :class => 'input', :placeholder => 'Price' %>
+            <span class="icon is-small is-left">
+            <i class="fas fa-dollar-sign"></i>
+            </span>
+        </div>
+    </div>
+    <p><%= form.submit "Add details", :class => 'button is-primary' %></p><br>
+    <p><%= link_to("Back", main_index_path, :method => :get, :class => 'button is-primary') %></p>
 <%end%>

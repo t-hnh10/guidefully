@@ -1,9 +1,25 @@
-<h1><%=@guide.name%></h1>
+<h1 class='title is-1'><%=@guide.name%></h1>
 
-
-<p><%= "Phone Number: #{@guide.phone_number}" %></p>
-<p><%= "City: #{@guide.city}" %></p>
-<p><%= "Country: #{@guide.country}" %></p>
-<p><%= "Price: #{@guide.cost}" %></p>
-
-<p><%= link_to 'Back', main_index_path%></p>
+<table class="table is-hoverable">
+  <tbody>
+    <tr>
+      <th>Phone Number</th>
+      <td><%= "#{@guide.phone_number}" %></td>
+    </tr>
+    <tr>
+      <th>City</th>
+      <td><%= "#{@guide.city}" %></td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td><%= "#{@guide.country}" %></td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td><%= "$#{@guide.cost}" %></td>
+    </tr>
+  </tbody>
+</table>
+<p><%= link_to "Book", main_index_path, :class => "button is-warning"%></p>
+<br>
+<p><%= link_to "Back", main_index_path, :class => "button is-primary"%></p>

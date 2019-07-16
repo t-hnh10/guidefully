@@ -1,12 +1,12 @@
 <div>
-<table class="table">
+<table class="table is-striped">
   <thead>  
     <tr>
       <th>Name</th>
       <th>Phone Number</th>
       <th>City</th>
       <th>Country</th>
-      <th>Cost</th>
+      <th>Price</th>
     </tr>
   </thead>
   <tbody>
@@ -17,13 +17,13 @@
           <td><%= i.phone_number%></td>
           <td><%= i.city%></td>
           <td><%= i.country%></td>
-          <td><%= i.cost%></td>
+          <td>$<%= i.cost%>/hour</td>
         </tr>
       <%end%>
     <%end%>
   </tbody>
  </table>
- <%= link_to 'Join as a Guide', new_guide_path%>
+ <%= button_to 'Join as a Guide', new_guide_path, :method => :get, :class => 'button is-primary'%>
  <br> 
- <%= link_to 'Join as a Traveller', new_traveller_path%> 
+ <%= button_to 'Join as a Traveller', new_traveller_path, :method => :get, :class => 'button is-primary' %> 
 </div>

@@ -1,0 +1,14 @@
+<h1 class="title"><%= "Review for #{@review.guide.name}"%></h1>
+<%=form_with model: @review do |form|%>
+    <%= form.hidden_field :guide_id%>
+    <div class="field">
+        <%=label(:comment, 'Comment', :class => 'label')%>
+        <div class="control">
+            <%= form.text_field :comment, required: true, minlength: 1, :class => 'input', :type => 'text', :placeholder => 'Enter your comment here'%>
+        </div>
+    </div>
+    <br>
+    <p><%= form.submit "Add review", :class => "button is-primary" %></p>
+    <br>
+    <p class="link item-link"><%= link_to 'Cancel', :back, :class => "button is-primary"%>
+<%end%>

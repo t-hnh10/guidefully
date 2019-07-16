@@ -22,4 +22,25 @@
 </table>
 <p><%= link_to "Book", new_guide_booking_path(guide_id: @guide.id), :class => "button is-warning"%></p>
 <br>
+<p><%= link_to 'Add a review', new_review_path(guide: @guide), :class => "button is-link" %></p><br>
+<div>
+  <h4 class="is-size-3">Reviews</h4>
+  <div class="card">
+  <% if @reviews %>
+    <% @reviews.each do |review| %>
+      <header class="card-header">
+        <p class="card-header-title">
+        <%= review.user.name %>
+        </p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <%= review.comment%>
+        </div>
+      </div>
+    <%end%>
+  <%end%>
+</div>
+</div>
+<br>
 <p><%= link_to "Back", main_index_path, :class => "button is-primary"%></p>

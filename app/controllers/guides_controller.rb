@@ -5,6 +5,7 @@ class GuidesController < ApplicationController
     
     def show
         @guide = Guide.find(params[:id])
+        @reviews = @guide.reviews
     end
 
     def new

@@ -1,5 +1,6 @@
 class Guide < ApplicationRecord
     has_many :bookings
+    has_many :reviews
 
     def self.create_guide(name, phone_number, city, country, cost)
         guide = Guide.new(name: name, phone_number: phone_number, city: city, country: country, cost: cost)

@@ -12,6 +12,8 @@
         <tr>
             <td><%=i.date%></td>
             <td><%=link_to i.guide.name, guide_path(i) %></td>
+            <td><%=link_to 'Edit', edit_booking_path(i)%></td>
+            <td><%= link_to 'Delete', delete_booking_path(i.id), :method => :delete %></td>
         </tr>
       <%end%>
     <%end%>

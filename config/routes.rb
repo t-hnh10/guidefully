@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :guides
   resources :bookings
   get 'guides/:guide_id/bookings/new', to: 'bookings#new', as: 'new_guide_booking'
+  delete 'bookings/:id', to: 'bookings#destroy', as: 'delete_booking'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

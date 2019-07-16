@@ -1,0 +1,14 @@
+<h1 class='title'><%= "Your booking with #{@booking.guide.name}" %></h1>
+
+<%= form_with model: @booking, local:true do |form| %>
+    <%= form.hidden_field :guide_id, value: params[:guide_id] %>
+    <div class="field">
+        <%=label(:date, 'Date', :class => 'label')%>
+        <div class="control">
+            <%= form.date_field :date, required: true, :class => 'input'%>
+        </div>
+    </div>
+    <p><%= form.submit "Update Booking", :class => 'button is-primary' %></p>
+    <br>
+    <p><%= link_to("Back", main_index_path, :method => :get, :class => 'button is-primary') %></p>
+<%end%>

@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
     def create
         @booking = Booking.create_booking(params[:booking][:date], params[:booking][:guide_id], current_user.id)
         logger.info current_user.inspect
-        redirect_to main_index_path
+        redirect_to bookings_path
     end
 
     def index

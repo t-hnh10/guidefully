@@ -20,6 +20,6 @@
     </tr>
   </tbody>
 </table>
-<p><%= link_to "Book", main_index_path, :class => "button is-warning"%></p>
+<p><%= link_to "Book", new_guide_booking_path(guide_id: @guide.id), :class => "button is-warning"%></p>
 <br>
 <p><%= link_to "Back", main_index_path, :class => "button is-primary"%></p>

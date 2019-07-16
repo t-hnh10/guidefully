@@ -5,12 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 Guide.destroy_all
-Traveller.destroy_all
 
 Guide.create(name: 'Lee', phone_number: '0404 040 404', city: 'Quantum City', country: 'Lithuania', cost: 12)
 Guide.create(name: 'Dmitry', phone_number: '0404 040 404', city: 'Kazan', country: 'Russia', cost: 25)
 Guide.create(name: 'Chulsoo', phone_number: '0404 040 404', city: 'Hangang', country: 'South Korea', cost: 15)
 Guide.create(name: 'Phoebe', phone_number: '0404 040 404', city: 'New York City', country: 'United States of America', cost: 20)
-
-Traveller.create(name: 'Fred', phone_number: '0404 040 404')

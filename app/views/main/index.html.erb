@@ -1,32 +1,31 @@
 <div>
   <%= button_to 'View my Tour Bookings', bookings_path, :method => :get, :class => 'button is-info'%>
   <br>
-  <br>
 </div>
 <div>
-<table class="table is-striped">
-  <thead>  
-    <tr>
-      <th>Tour Guide Name</th>
-      <th>Phone Number</th>
-      <th>City</th>
-      <th>Country</th>
-      <th>Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <%if @guides%>
-      <% @guides.each do |i| %>
-        <tr>
-          <td><%=link_to i.name, guide_path(i) %></td>
-          <td><%= i.phone_number%></td>
-          <td><%= i.city%></td>
-          <td><%= i.country%></td>
-          <td>$<%= i.cost%>/hour</td>
-        </tr>
+  <table class="table is-striped">
+    <thead>  
+      <tr>
+        <th>Tour Guide Name</th>
+        <th>Phone Number</th>
+        <th>City</th>
+        <th>Country</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%if @guides%>
+        <% @guides.each do |i| %>
+          <tr>
+            <td><%=link_to i.name, guide_path(i) %></td>
+            <td><%= i.phone_number%></td>
+            <td><%= i.city%></td>
+            <td><%= i.country%></td>
+            <td>$<%= i.cost%>/hour</td>
+          </tr>
+        <%end%>
       <%end%>
-    <%end%>
-  </tbody>
- </table>
- <%= button_to 'Join as a Guide', new_guide_path, :method => :get, :class => 'button is-primary'%>
+    </tbody>
+  </table>
+  <%= button_to 'Join as a Guide', new_guide_path, :method => :get, :class => 'button is-primary'%>
 </div>

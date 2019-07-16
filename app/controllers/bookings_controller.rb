@@ -8,4 +8,9 @@ class BookingsController < ApplicationController
         logger.info current_user.inspect
         redirect_to main_index_path
     end
+
+    def index
+        @bookings = current_user.bookings
+    end
+
 end

@@ -1,0 +1,20 @@
+<div>
+<table class="table is-striped">
+  <thead>  
+    <tr>
+        <th>Booking Date</th>
+        <th>Tour Guide</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%if @bookings%>
+      <% @bookings.each do |i| %>
+        <tr>
+            <td><%=i.date%></td>
+            <td><%=link_to i.guide.name, guide_path(i) %></td>
+        </tr>
+      <%end%>
+    <%end%>
+  </tbody>
+ </table>
+</div>

@@ -4,21 +4,9 @@
 
 > [GitHub Repository](https://github.com/t-hnh10/mr-worldwide-guide)
 
-* Ruby version
+## ERD
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+![ERD](docs/ERD.png)
 
 ## Future Extensions
 - Enable User to book for other travellers

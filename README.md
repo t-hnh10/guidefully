@@ -1,8 +1,8 @@
 # README
 
-> [My Worldwide Guide](http://mr-worldwide-guide.herokuapp.com/)
+> [Guidefully](http://guidefully.herokuapp.com/)
 
-> [GitHub Repository](https://github.com/t-hnh10/mr-worldwide-guide)
+> [GitHub Repository](https://github.com/t-hnh10/guidefully)
 
 ## ERD
 

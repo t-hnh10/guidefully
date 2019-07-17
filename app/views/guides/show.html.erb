@@ -1,10 +1,10 @@
-<h1 class='title is-1'><%=@guide.name%></h1>
+<h1 class='title is-1'><%=@guide.name %><%= " #{emoji_flag_for_country(@guide.country)}" %></h1>
 
 <table class="table is-hoverable">
   <tbody>
     <tr>
       <th>Phone Number</th>
-      <td><%= "#{@guide.phone_number}" %></td>
+      <td><%= "#{number_to_phone(@guide.phone_number, country_code: country_code(@guide.country), delimiter: " ")}" %></td>
     </tr>
     <tr>
       <th>City</th>
@@ -13,6 +13,7 @@
     <tr>
       <th>Country</th>
       <td><%= "#{@guide.country}" %></td>
+      <td></td>
     </tr>
     <tr>
       <th>Price</th>

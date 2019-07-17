@@ -25,13 +25,10 @@
         </div>
     </div>
     <div class="field">
-        <%=label(:country, 'Country', :class => 'label')%>
-        <div class="control has-icons-left has-icons-right">
-            <%= form.text_field :country, required: true, minlength: 1, :class => 'input', :placeholder => 'Country', :type => 'text' %>
-            <span class="icon is-small is-left">
-            <i class="fas fa-flag"></i>
-            </span>
-        </div>
+    <%=label(:country, 'Country', :class => 'label')%>
+        <p class="control select">
+            <%= form.collection_select(:country, ISO3166::Country.countries.sort_by(&:name).collect { |c| [ c.name, "#{c.name} #{c.emoji_flag}" ] }, :first, :last, {include_blank: 'Select a country'}, 'data-style': 'form-control', required: true) %>
+        </p>
     </div>
     <div class="field">
         <%=label(:cost, 'Price', :class => 'label')%>

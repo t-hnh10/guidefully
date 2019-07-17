@@ -10,6 +10,7 @@
         <th>Phone Number</th>
         <th>City</th>
         <th>Country</th>
+        <th></th>
         <th>Price</th>
       </tr>
     </thead>
@@ -18,9 +19,10 @@
         <% @guides.each do |i| %>
           <tr>
             <td><%=link_to i.name, guide_path(i) %></td>
-            <td><%= i.phone_number%></td>
+            <td><%= number_to_phone(i.phone_number, country_code: country_code(i.country), delimiter: " ")%></td>
             <td><%= i.city%></td>
             <td><%= i.country%></td>
+            <td><%= emoji_flag_for_country(i.country) %></td>
             <td>$<%= i.cost%>/hour</td>
           </tr>
         <%end%>

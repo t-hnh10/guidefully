@@ -64,3 +64,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "devise", ">= 4.7.1"
 
 gem 'countries', :require => 'countries/global'
+
+gem "nokogiri", ">= 1.10.4"
